@@ -1,8 +1,6 @@
 #ifndef HITTABLE_H
 #define HITTABLE_H
 
-#include "ray.h"
-
 class hit_record
 {
     public:
@@ -16,7 +14,7 @@ class hit_record
         {
             // outward_normal has a unit length
 
-            front_face = dot(r.direction,outward_normal) > 0;
+            front_face = dot(r.direction(),outward_normal) < 0;
             normal = front_face ? outward_normal : -outward_normal;
         }
 

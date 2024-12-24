@@ -1,8 +1,7 @@
-#ifndef SPHERE.H
-#define SPHERE.H
+#ifndef SPHERE_H
+#define SPHERE_H
 
 #include "hittable.h"
-#include "vec3.h"
 
 class sphere : public hittable {
 
@@ -41,7 +40,7 @@ class sphere : public hittable {
             vec3 outward_normal = (rec.p - center) / radius;
             rec.set_face_normal(r, outward_normal);
 
-            return true
+            return true;
         }
 
     private :
